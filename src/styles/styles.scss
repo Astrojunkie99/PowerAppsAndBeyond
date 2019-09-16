@@ -1,0 +1,20 @@
+// import fonts
+@import url(https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Kalam&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
+
+
+// variables
+$bowlby: 'Bowlby One SC';
+$racing: 'Racing Sans One';
+$kalam: 'Kalam';
+$rubik: 'Rubik';
+
+h1 {
+    font-family:$bowlby;
+}
+
+p {
+    font-family:$rubik;
+}
