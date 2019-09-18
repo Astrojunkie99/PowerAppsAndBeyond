@@ -2,6 +2,10 @@ import React from 'react'
 
 import { FaBars} from 'react-icons/fa';
 import { FaTimes} from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
+import { FaSatellite } from 'react-icons/fa';
+import {FaRocket} from 'react-icons/fa';
+import {FaCameraRetro } from 'react-icons/fa';
 import styles from "../styles/navbar.module.scss";
 import {Link} from "gatsby";
 import Mars from "../images/Mars.jpg";
@@ -20,10 +24,10 @@ const Navbar = () => {
         
 
             <ul className={styles.sidebar}>
-                <Link activeStyle={{color:"#ffebee", textDecoration:"none"}}><li>Home Page</li></Link>
-                <Link activeStyle={{color:"#ffebee", textDecoration:"none"}}><li>APOD</li></Link>
-                <Link activeStyle={{color:"#ffebee", textDecoration:"none"}}><li>Rocket Launches</li></Link>
-                <Link activeStyle={{color:"#ffebee", textDecoration:"none"}}><li>Random Hubble Pics</li></Link>
+                <Link style={{color:"white", textDecoration:"none"}} to="/"activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaHome className={styles.icon}/> Home Page</li></Link>
+                <Link style={{color:"white", textDecoration:"none"}} to="/apod" activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaCameraRetro className={styles.icon}/> APOD</li></Link>
+                <Link style={{color:"white", textDecoration:"none"}} to="/rockets" activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaRocket className={styles.icon}/> Rocket Launches</li></Link>
+                <Link style={{color:"white", textDecoration:"none"}} to="/hubble" activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaSatellite className={styles.icon}/> Random Hubble Pics</li></Link>
             </ul>
             
             <img src={Mars} className={styles.imageDisplay} />

@@ -3,7 +3,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Navbar from "../components/navbar";
 
-const Layout = () => {
+const Layout = ({children}) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -17,8 +17,8 @@ const Layout = () => {
   return (
     
     <div>
-     
         <Navbar />
+        {children}
     
     </div>
   )

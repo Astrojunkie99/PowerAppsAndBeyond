@@ -11,7 +11,7 @@ h2 {
 .sidebar {
   background-color: $navcolor;
   color: white;
-  max-width: 200px;
+  max-width: 300px;
   display:inline-flexbox;
   padding-left: 0px;
   border-radius: 4px;
@@ -22,6 +22,7 @@ h2 {
 
   li {
     font-family:$rubik;
+    font-size:1.3rem;
     background-color: black;
     border-top: 1px solid black;
       border-bottom: 2px solid black;
@@ -79,6 +80,10 @@ header {
 }
 .spacing {
   height:10px;
+}
+
+.icon {
+  margin-bottom:-2px;
 }
 
 //animations
