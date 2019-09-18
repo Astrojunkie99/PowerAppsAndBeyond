@@ -3,7 +3,7 @@ $navcolor: #d32f2f;
 
 h2 {
   letter-spacing:2px;
-  margin-top:-25px;
+  margin-top:-30px;
   margin-left:65px;
   color:white;
 }
@@ -22,13 +22,15 @@ h2 {
 
   li {
     font-family:$rubik;
-    background-color: $navcolor;
+    background-color: black;
+    border-top: 1px solid black;
+      border-bottom: 2px solid black;
     padding:10px 15px;
     list-style: none;
     &:hover{
-      background-color: darken($navcolor,10%) ;
-      border-top: 1px solid darken($navcolor,20%);
-      border-bottom: 2px solid darken($navcolor,20%);
+      animation-duration: 2s;
+            animation-name: buttonhover;
+            animation-fill-mode: both;
     }
   }
 
@@ -52,11 +54,9 @@ h2 {
   
   &__button {
     color:white;
-   
     width: 300px;
-    border: 1px solid #ddf;
     padding: 1rem;
-    border-radius: 0.25rem;
+    
   }
 }
 
@@ -77,3 +77,21 @@ imageDisplay {
 header {
   position: relative;
 }
+.spacing {
+  height:10px;
+}
+
+//animations
+
+@keyframes buttonhover {
+  from {
+      background-color:black;
+      border-top: 1px solid black;
+      border-bottom: 2px solid black
+  }
+  to {
+      background-color: darken($navcolor,20%);
+      border-top: 1px solid darken($navcolor,20%);
+      border-bottom: 2px solid darken($navcolor,20%);
+  }
+  }

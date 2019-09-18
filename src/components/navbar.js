@@ -10,8 +10,9 @@ const Navbar = () => {
 
     return (
         <header>
+        <div className={styles.spacing} />
         <input id={styles.sidebar__trigger} className={styles.sidebar__trigger} type="checkbox" />
-            <label for={styles.sidebar__trigger}>
+            <label htmlFor={styles.sidebar__trigger}>
             <span className={styles.sidebar__button+" "+ styles.sidebar__buttonOpen}><FaBars/></span>
             <span className={styles.sidebar__button+" "+ styles.sidebar__buttonClose}><FaTimes /></span>
             </label><h2>PowerApps <span className={styles.logo}>and Beyond</span></h2>
