@@ -29,8 +29,6 @@ const Navbar = () => {
                 <Link style={{color:"white", textDecoration:"none"}} to="/rockets" activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaRocket className={styles.icon}/> Rocket Launches</li></Link>
                 <Link style={{color:"white", textDecoration:"none"}} to="/hubble" activeStyle={{color:"#bdbdbd", textDecoration:"none"}}><li><FaSatellite className={styles.icon}/> Random Hubble Pics</li></Link>
             </ul>
-            
-            <img src={Mars} className={styles.imageDisplay} />
         </header>
     )
 }

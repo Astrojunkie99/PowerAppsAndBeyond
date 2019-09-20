@@ -11,14 +11,27 @@ $racing: 'Racing Sans One';
 $kalam: 'Kalam';
 $rubik: 'Rubik';
 
+$textcolor:white;
+
 h1, h2, h3, h4, h5 {
     font-family:$bowlby;
+    color:$textcolor;
 }
 
 p {
     font-family:$rubik;
+    color:$textcolor;
 }
 
 *{
     background-color: black;
+}
+
+.card {
+    box-shadow: 2px 2px 4px 8px rgba(255, 255, 255, 0.4);
+    margin:1rem;
+    padding:0.5rem;
+    .banner {
+        width:90%;
+    }
 }

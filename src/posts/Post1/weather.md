@@ -3,7 +3,7 @@ title: Starting this blog
 date: 2019-09-18
 author: Paul Robinson
 tags: ['Netlify','Gatsby','APIs']
-featuredImage: Cars.jpg
+featuredImage: coffee.jpg
 description: What has led to starting this Blog
 ---
 I am a slow learner in a number of ways - this blog is my third attempt at starting one. The first two attempts included a huge number of lessons. Far too many to list here but I will go through some of the more painfull ones.
