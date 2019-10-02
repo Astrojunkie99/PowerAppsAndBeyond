@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FaBars} from 'react-icons/fa';
 import { FaTimes} from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
@@ -8,7 +7,6 @@ import {FaRocket} from 'react-icons/fa';
 import {FaCameraRetro } from 'react-icons/fa';
 import styles from "../styles/navbar.module.scss";
 import {Link} from "gatsby";
-import Mars from "../images/Mars.jpg";
 
 const Navbar = () => {
 
@@ -19,7 +17,7 @@ const Navbar = () => {
             <label htmlFor={styles.sidebar__trigger}>
             <span className={styles.sidebar__button+" "+ styles.sidebar__buttonOpen}><FaBars/></span>
             <span className={styles.sidebar__button+" "+ styles.sidebar__buttonClose}><FaTimes /></span>
-            </label><h2>PowerApps <span className={styles.logo}>and Beyond</span></h2>
+            </label><h2 className={styles.sticky}>PowerApps <span className={styles.logo}>and Beyond</span></h2>
             
         
 

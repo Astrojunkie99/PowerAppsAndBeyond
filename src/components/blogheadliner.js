@@ -1,17 +1,20 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Layout from "../components/layout";
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from "gatsby-image";
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
     query {
-  allMarkdownRemark(limit: 10) {
+  allMarkdownRemark(limit: 1, sort: {order: DESC, fields: frontmatter___date}) {
     edges {
       node {
+        fields {
+          slug
+        }
         frontmatter {
           date(formatString: "DD MMMM YYYY")
           author
+          slug
           featuredImage {
             childImageSharp {
               fluid {
@@ -42,20 +45,20 @@ const BlogPage = () => {
 }
     `);
     return (
-        <Layout>
-            <h1>Blog Page</h1>
+        <div>
             {data.allMarkdownRemark.edges.map((edge)=>{
                 return (
+                  <Link style={{textDecoration:"none"}}  activeStyle={{textDecoration:"none"}} to={`/posts/${edge.node.fields.slug}`}>
                     <div className="card banner">
                         <h2 className="title">{edge.node.frontmatter.title}</h2>
                         <h3 className="center" >By: {edge.node.frontmatter.author} - {edge.node.frontmatter.date}</h3>
                         <Img style={{"display":"block", "marginLeft":"auto", "marginRight":"auto","maxWidth":"800px"}} fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid} ></Img>
-                        <p className="excerpt">{edge.node.frontmatter.description}</p>
-                        <div dangerouslySetInnerHTML={{ __html: edge.node.html }}></div>
+                        <p className="excerpt">{edge.node.excerpt}</p>
                     </div>
+                  </Link>
                 )
             })}
-        </Layout>
+        </div>
     )
 }
 

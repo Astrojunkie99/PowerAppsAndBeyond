@@ -1,43 +1,39 @@
-// import fonts
+
 @import url(https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Kalam&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
-
-
-// variables
+//variables
+$cardcolor:white;
+$textColor:white;
+$shadowColor:#757575;
 $bowlby: 'Bowlby One SC';
 $racing: 'Racing Sans One';
 $kalam: 'Kalam';
 $rubik: 'Rubik';
 
-$textcolor:white;
-$primaryColor:#03a9f4;
-
-h1, h2, h3, h4, h5 {
-    font-family:$bowlby;
-    color:$textcolor;
+.gridContainer{
+    background-color: $cardcolor;
 }
 
-p {
-    font-family:$rubik;
-    color:$textcolor;
-}
 
-*{
-    background-color: black;
+.blogSection {
+    background-color: white;
+    display:inline-grid;
+    grid-template-columns: auto auto auto;
+    margin:0;
+    padding:0;
 }
-
-.card {
-    border:1px solid white;
-    box-shadow: 2px 2px rgba(255, 255, 255, 0.6);
-    margin:1rem;
-    padding:0.5rem;
+.card{
+    background-color: transparent;
+    color:$textColor;
+    margin:0;
+    padding:1.5rem;
     .banner {
         width:80%;
     }
     .bannerImage {
-        max-width: 800px;
+        object-fit: contain; 
     }
     h1,h2,h3,h4,h5{
         font-family: $kalam;
@@ -49,6 +45,9 @@ p {
         padding:10px;
         margin:10px;
         font-size:2em;
+        color:$textColor;
+        background-color: transparent;
+        text-shadow: 2px 2px 2px $shadowColor;
     }
     .center{
         text-align:center;
@@ -65,11 +64,9 @@ p {
     }
 }
 
-.chip {
-    border:0;
-    border-radius: 50%;
-    background-color: $primaryColor;
-    color:$textcolor;
-    padding:4px 8px;
+.bgcard {
+    min-height:300px;
+    padding:0;
+    margin:1rem;
 
 }

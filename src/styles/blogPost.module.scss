@@ -1,0 +1,43 @@
+//variables
+$dateText:#e0e0e0;
+$buttonColor:#eeeeee;
+$buttonText:black;
+
+.blogCard {
+    padding: 1rem;
+    margin:1rem 9rem;
+}
+
+.Title {
+    letter-spacing: .2rem;
+}
+
+.date {
+    font-size: 80%;
+    color:$dateText;
+
+}
+
+.tagButton {
+    background-color:$buttonColor;
+    color:$buttonText;
+    border-radius: 2px;
+    border:2 solid black;
+    margin:10px 20px;
+    padding:5px 10px;
+    &:hover{
+        animation-duration: 1s;
+        animation-name: buttonhover;
+        animation-fill-mode: both;
+    }
+
+}
+
+@keyframes buttonhover {
+    from {
+        background-color:$buttonColor;
+    }
+    to {
+        background-color: darken($buttonColor,40%);
+    }
+    }
