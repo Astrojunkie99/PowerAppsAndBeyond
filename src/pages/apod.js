@@ -13,7 +13,7 @@ class ContactPage extends React.Component {
   };
   
   componentDidMount(){
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`).then(response =>{
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.GATSBY_API_KEY}`).then(response =>{
       return response.json()
     }).then(json =>{
       console.log(json);
