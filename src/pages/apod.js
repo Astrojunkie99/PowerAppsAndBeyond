@@ -1,16 +1,53 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import Layout from "../components/layout";
+import style from "../styles/apod.module.scss";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+class ContactPage extends React.Component {
+  state={
+    loading: true,
+    error:false,
+    fetchImg: "",
+    fetchText:"",
+    fetchDate:"",
+    fetchTitle:"",
+  };
+  
+  componentDidMount(){
+    fetch(`${process.env.GATSBY_API_URL}=${process.env.API_KEY}`).then(response =>{
+      return response.json()
+    }).then(json =>{
+      console.log(json);
+      this.setState({
+        fetchImg:json.url,
+        fetchText:json.explanation,
+        fetchDate:json.date,
+        fetchTitle:json.title,
+        loading:false
+      })
+    })
+  }
+  render (){
+    const {fetchImg} = this.state;
+    const {fetchText} = this.state;
+    const {fetchTitle} = this.state;
+    const {fetchDate} = this.state;
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Astronomy Picture of the Day" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to APOD</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
 
-export default SecondPage
+    return (
+      <Layout>
+        <div className={style.indexCard}>
+          <h1>{fetchTitle}</h1>
+          <div className={style.container}>
+            <img className={style.apodImg} src={fetchImg} alt="APod Picture here..."></img>
+          </div>
+          <h5 className={style.title}>{fetchDate}</h5>
+          <p className={style.body}>{fetchText}</p>
+        </div>
+
+      </Layout>
+      )
+    }
+
+}
+
+export default ContactPage
