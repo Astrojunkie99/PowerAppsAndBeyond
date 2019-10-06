@@ -1,0 +1,57 @@
+@import '../styles/styles';
+
+$breakSmall: 600px;
+
+$clock:#2196f3;
+
+.clockface {
+        font-family:$VT323;
+        color:$clock;
+        font-size:1.5rem;
+        text-align:center;
+        letter-spacing:2px;
+        text-shadow: 2px 2px darken($clock,30%);
+        padding:1rem 1rem;
+    }
+
+.indexCard {
+
+    background-color: white;
+    color: black;
+
+    .container {
+        padding: 0;
+        margin: 1rem 9rem;
+        @media only screen and (max-width: 640px) {
+		margin:10px;}
+    }
+
+    .Title {
+        background-color: white;
+        color: black;
+        text-align: center;
+
+    }
+
+    .apodImg {
+        background-color: white;
+        max-width: 100%;
+    }
+
+    .rocketImg {
+        background-color: white;
+        max-width: 100%;
+    }
+
+    .body{
+        background-color: white;
+        color: black;
+        padding: 1rem 9rem;
+        @media only screen and (max-width: 640px) {
+		padding:10px;}
+    }
+    .imageContainer{
+        width:70%;
+        margin:1rem auto;
+    }
+}

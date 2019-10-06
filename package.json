@@ -11,6 +11,7 @@
     "gatsby-background-image": "^0.8.14",
     "gatsby-cli": "^2.7.47",
     "gatsby-image": "^2.2.20",
+    "gatsby-plugin-google-analytics": "^2.1.20",
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.7",
@@ -25,6 +26,7 @@
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-date-countdown-timer": "^1.0.3",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
@@ -32,7 +34,9 @@
     "react-responsive-navbar": "^1.0.11",
     "react-sizeme": "^2.6.7",
     "react-stack-grid": "^0.7.1",
-    "styled-components": "^4.3.2"
+    "react-time": "^4.3.0",
+    "styled-components": "^4.3.2",
+    "use-clock": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

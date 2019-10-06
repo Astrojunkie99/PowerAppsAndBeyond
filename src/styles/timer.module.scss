@@ -1,0 +1,23 @@
+.Timer {
+    color: white;
+}
+
+.Countdown {
+    margin: 10px auto;
+    padding-bottom: 20px;
+}
+
+.CountdownCol {
+    display: inline-block;
+}
+
+.CountdownColElement {
+    display: inline-block;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.CountdownColElement strong {
+    font-size: 50px;
+}

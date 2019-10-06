@@ -3,13 +3,27 @@
 @import url(https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Kalam&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rubik&display=swap);
+@import url(https://fonts.googleapis.com/css?family=VT323&display=swap);
 
+//Media
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
 
 // variables
 $bowlby: 'Bowlby One SC';
 $racing: 'Racing Sans One';
 $kalam: 'Kalam';
 $rubik: 'Rubik';
+$VT323: 'VT323';
 
 $textcolor:white;
 $primaryColor:#03a9f4;
@@ -73,3 +87,4 @@ p {
     padding:4px 8px;
 
 }
+
