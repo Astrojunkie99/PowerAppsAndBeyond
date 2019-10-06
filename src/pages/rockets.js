@@ -2,32 +2,27 @@ import React, { Component } from "react"
 import Layout from "../components/layout"
 import style from "../styles/apod.module.scss"
 import Countdown from "react-countdown-now"
+import "isomorphic-fetch"
 
-class TimeContainer extends Component {
-  constructor() {
-    super()
-    let d = new Date()
-    this.state = {
-      day: d.getDay(),
-      month: d.getMonth(),
-      date: d.getDate(),
-      year: d.getFullYear(),
-      time: d.toLocaleTimeString(),
-    }
-    this.countingSecond = this.countingSecond.bind(this)
-  }
-  countingSecond() {
-    let d = new Date()
-    this.setState({
-      day: d.getDay(),
-      month: d.getMonth(),
-      date: d.getDate(),
-      year: d.getFullYear(),
-      time: d.toLocaleTimeString(),
-    })
+class rocketPage extends Component {
+  state = {
+    image: "",
+    image1: "",
+    image2: "",
+    header: "",
+    header1: "",
+    header2: "",
+    description: "",
+    description1: "",
+    description2: "",
+    launchTime: "",
+    launchTime1: "",
+    launchTime2: "",
+    lDay: "",
+    lDay1: "",
+    lDay2: "",
   }
   componentWillMount() {
-    setInterval(this.countingSecond, 1000)
     fetch(`https://launchlibrary.net/1.4/launch/next/5`)
       .then(response => {
         return response.json()
@@ -36,7 +31,6 @@ class TimeContainer extends Component {
         const launchDay = new Date(json.launches[0].net)
         const launchDay1 = new Date(json.launches[1].net)
         const launchDay2 = new Date(json.launches[2].net)
-        console.log(launchDay)
         this.setState({
           header: json.launches[0].name,
           description: json.launches[0].missions[0].description,
@@ -60,28 +54,6 @@ class TimeContainer extends Component {
     const { image } = this.state
     const { image1 } = this.state
     const { image2 } = this.state
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "November",
-      "December",
-    ]
-    const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ]
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
       if (completed) {
         // Render a completed state
@@ -102,10 +74,6 @@ class TimeContainer extends Component {
     return (
       <Layout>
         <div className={style.indexCard}>
-          <h3 className={style.Title}>
-            {days[this.state.day]}, {months[this.state.month]} {this.state.date}
-            , {this.state.year} {this.state.time}
-          </h3>
           <h4 className={style.Title}>{this.state.header}</h4>
           <p className={style.body}>{this.state.description}</p>
           <h3 className={style.clockface}>
@@ -116,6 +84,7 @@ class TimeContainer extends Component {
             <img
               className={style.rocketImg}
               src={image}
+              data-img={image}
               alt="Rocket Picture here..."
             ></img>
           </div>
@@ -154,4 +123,4 @@ class TimeContainer extends Component {
     )
   }
 }
-export default TimeContainer
+export default rocketPage
