@@ -15,14 +15,6 @@ module.exports = {
         anonymize: true,
         // Setting this parameter is also optional
         respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -44,7 +36,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-         // This path is relative to the root of the site.
+        // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-sass`,
@@ -59,8 +51,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`
-        
+        path: `${__dirname}/src/`,
       },
     },
     {
@@ -73,19 +64,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
-  {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 590,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
