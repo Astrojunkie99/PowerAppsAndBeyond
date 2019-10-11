@@ -28,63 +28,109 @@ $VT323: 'VT323';
 $textcolor:white;
 $primaryColor:#03a9f4;
 
-h1, h2, h3, h4, h5 {
-    font-family:$bowlby;
-    color:$textcolor;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $bowlby;
+    color: $textcolor;
 }
 
 p {
-    font-family:$rubik;
-    color:$textcolor;
+    font-family: $rubik;
+    color: $textcolor;
 }
 
-*{
+* {
     background-color: black;
 }
 
 .card {
-    border:1px solid white;
+    border: 1px solid white;
     box-shadow: 2px 2px rgba(255, 255, 255, 0.6);
-    margin:1rem;
-    padding:0.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
+
     .banner {
-        width:80%;
+        width: 80%;
     }
+
     .bannerImage {
         max-width: 800px;
     }
-    h1,h2,h3,h4,h5{
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         font-family: $kalam;
     }
+
     .title {
         font-family: $kalam;
         text-transform: uppercase;
         text-align: center;
-        padding:10px;
-        margin:10px;
-        font-size:2em;
-    }
-    .center{
-        text-align:center;
+        padding: 10px;
+        margin: 10px;
+        font-size: 2em;
     }
 
-    .excerpt{
+    .center {
+        text-align: center;
+    }
+
+    .excerpt {
         font-size: 1.2em;
         font-style: italic;
         font-weight: bold;
         font-family: $rubik;
         text-indent: 5rem;
-        padding:2em;
-        
+        padding: 2em;
+
     }
 }
 
 .chip {
-    border:0;
+    border: 0;
     border-radius: 50%;
     background-color: $primaryColor;
-    color:$textcolor;
-    padding:4px 8px;
+    color: $textcolor;
+    padding: 4px 8px;
 
 }
 
+.primaryButton {
+    border: 1px solid darken($primaryColor, 20%);
+    border-radius: 2%;
+    background-color: $primaryColor;
+    color: $textcolor;
+    padding: 8px 10px;
+
+    &:hover {
+        animation-duration: 2s;
+        animation-name: buttonHover;
+        animation-fill-mode: both;
+    }
+}
+
+ul {
+    color: $textcolor;
+    font-family: $rubik;
+}
+
+ol {
+    color: $textcolor;
+    font-family: $rubik;
+}
+
+@keyframes buttonHover {
+    from {
+        background-color: $primaryColor;
+    }
+
+    to {
+        background-color: darken($primaryColor, 20%);
+    }
+}

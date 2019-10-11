@@ -11,7 +11,7 @@ slug: /post6
 
 ##Blog construction updates##
 
-I have put a fair bit of work into getting this moving in the direction I want these past handful of weeks. The list is long but there is still heaps to do. The list of things I have done has included dynamic elements with API calls to both the astronomy picture of the day and rocket launch database. The tricky part of the latter was getting a countdown clock completed.  This was quite hard for me and caused my build to crash multiple times.
+I have put a fair bit of work into getting this moving in the direction I want these past handful of weeks. The list is long but there is still heaps to do. The list of things I have done has included dynamic elements with API calls to both the astronomy picture of the day and rocket launch database. The tricky part of the latter was getting a countdown clock completed. This was quite hard for me and caused my build to crash multiple times.
 
 After working out that it was a npm package that was causing the drama, I had two choices, lose it or make a workaround for it. The first choice was the one I took. I replaced the package I was using with something else that did a similar job. Problem solved. When I got it mechanically working, I stopped without worrying about styling.
 
@@ -19,12 +19,12 @@ Another element added was API key security. Because I am using Netlify I am taki
 
 I added SEO to the site. It works.
 
-Inline images were added. I just followed the Gatsby docs on that one and that works without any issues. 
+Inline images were added. I just followed the Gatsby docs on that one and that works without any issues.
 Outstanding tasks for me include:
-*A page for hubble pictures 
-*Include responsiveness for the site so that it looks decent on mobile 
-*Include a discussion section and generally finish off the styling 
-*And some social media linking
+
+1. A page for hubble pictures
+1. Include responsiveness for the site so that it looks decent on mobile
+1. Include a discussion section and generally finish off the styling
+1. And some social media linking
 
 Hopefully I should have a lot of this very soon.
-
