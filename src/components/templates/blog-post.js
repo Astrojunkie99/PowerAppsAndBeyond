@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import styles from "../../styles/blogPost.module.scss"
 import kebabCase from "lodash.kebabcase"
-import SEO from "../seo"
+import SEO from "../seo";
 
 export const query = graphql`
   query($slug: String!) {
@@ -47,6 +47,7 @@ const BlogPost = props => {
       <SEO
         title={props.data.markdownRemark.frontmatter.title}
         description={props.data.markdownRemark.frontmatter.description}
+        tags={props.data.markdownRemark.frontmatter.tags}
       />
       <Img
         fluid={
