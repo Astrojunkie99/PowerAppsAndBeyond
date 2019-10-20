@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteURL: `https://agitated-knuth-124d12.netlify.com`,
+    siteUrl: `https://agitated-knuth-124d12.netlify.com`,
     title: `PowerApps and Beyond`,
     description: `A personal blog ranging from topics including PowerApps, my adventures as an accidental web developer to discussions in space`,
     author: `Paul Robinson`,
