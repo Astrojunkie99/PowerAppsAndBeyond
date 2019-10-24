@@ -49,12 +49,12 @@ const BlogPost = props => {
         description={props.data.markdownRemark.frontmatter.description}
         tags={props.data.markdownRemark.frontmatter.tags}
       />
-      <Img
+      <div className="imageLeader"><Img
         fluid={
           props.data.markdownRemark.frontmatter.featuredImage.childImageSharp
             .fluid
         }
-      ></Img>
+      ></Img></div>
       <div className={styles.blogCard}>
         <h1 className={styles.Title}>
           {props.data.markdownRemark.frontmatter.title}
